@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.activities.login.LogInActivity">
+
+        <!--Background image-->
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:scaleType="centerCrop"
+            app:imageUrlNoCache="@{`https://picsum.photos/g/600/800?random`}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@tools:sample/backgrounds/scenic" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:alpha="0.5"
+            android:background="@color/red_500"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilUsername"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            app:boxStrokeColor="@android:color/white"
+            app:counterTextColor="@color/red_500"
+            app:hintTextColor="@android:color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/tieUsername"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/Username" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilPassword"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tilUsername">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/tiePassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/Password"
+                android:inputType="textPassword" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
